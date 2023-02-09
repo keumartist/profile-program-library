@@ -1,0 +1,22 @@
+[package]
+description = "Created with Anchor"
+edition = "2021"
+name = "point-token"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "point_token"
+
+[features]
+cpi = ["no-entrypoint"]
+default = []
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+
+[profile.release]
+overflow-checks = true
+
+[dependencies]
+anchor-lang = "0.24.2"

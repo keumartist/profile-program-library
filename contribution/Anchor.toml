@@ -1,0 +1,14 @@
+[features]
+seeds = false
+[programs.localnet]
+point_token = "EDgdY2aFC4DLBvZcLkvn9qGhPqbo7BizVxJNAc79Q4Rd"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/devnet-wallet.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"

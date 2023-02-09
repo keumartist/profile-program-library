@@ -1,0 +1,26 @@
+[package]
+authors = ["Lead engineer <keumartist@gmail.com>"]
+description = "Contribution program by profile program library"
+edition = "2021"
+name = "contribution"
+repository = "https://github.com/jskeum/profile-program-library"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "contribution"
+
+[features]
+cpi = ["no-entrypoint"]
+default = []
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+
+[profile.release]
+overflow-checks = true
+
+[dependencies]
+anchor-lang = "0.24.2"
+anchor-spl = "0.24.2"
+profile = {path = "../../../profile/programs/profile", features = ["cpi", "no-entrypoint"]}
